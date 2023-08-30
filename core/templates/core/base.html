@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>{%block title%}{%endblock%} | Magic Paws</title>
+
+  {%load static%}
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{% static 'core/css/bootstrap.css'%}" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Dosis:400,500|Poppins:400,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="{% static 'core/css/style.css' %}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{% static 'core/css/responsive.css' %}" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a  href="{% url 'index' %}">
+           <img src="{% static 'core/images/mpLogo.png' %}" width="110" height="70" alt="">
+          </a>
+          <a ">
+            <img src="{% static 'core/images/patitas.png' %}" width="110" height="70" alt="">
+           </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav  ">
+                <li class="nav-item active">
+                  <a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'services' %}">Servicios</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'gallery' %}">Galería</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'about' %}"> Novedades</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'contact' %}">Contactos</a>
+                </li>
+              </ul>
+
+            </div>
+            <div>
+              {%if LINK_WHATSAPP != null%}
+              <a href="{{LINK_WHATSAPP}}" class="link">
+                <img src="{% static 'core/images/whatsapp.png' %}" HSPACE="10" alt="">
+              </a>
+              {%endif%}
+
+              {%if LINK_FACEBOOK != null%}
+              <a href="{{LINK_FACEBOOK}}">
+                <img src="{% static 'core/images/facebook.png' %}" HSPACE="10" alt="">
+              </a>
+              {%endif%}
+
+              {%if LINK_INSTAGRAM != null%}
+              <a href="{{LINK_INSTAGRAM}}">
+                <img src="{% static 'core/images/instagram.png' %}" HSPACE="10" alt="">
+              </a>
+              {%endif%}
+
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- CONTENIDO -->
+
+    {%block content%}{%endblock%}
+
+
+
+    </section>
+    <!-- info section -->
+    <section class="info_section layout_padding2">
+      <div class="container">
+        <div class="info_items">
+          <a href="">
+            <div class="item ">
+              <div class="img-box ">
+                <a href="https://goo.gl/maps/wvhGGbQRVfWibY3p7">
+                <img src="{% static 'core/images/mapa.png' %}" alt="">
+              </a>
+              </div>
+              <div class="detail-box">
+                <p>
+                  Dirección
+                </p>
+              </div>
+            </div>
+          </a>
+          <a href="">
+            <div class="item ">
+              <div class="img-box ">
+                <a href="https://web.whatsapp.com/">
+                <img src="{% static 'core/images/whatsapp1.png' %}" alt="">
+              </a>
+              </div>
+              <div class="detail-box">
+                <p>
+                  +593 958 700 765
+                </p>
+              </div>
+            </div>
+          </a>
+          <a href="">
+            <div class="item ">
+              <div class="img-box ">
+                <a href="https://outlook.live.com/mail/0/">
+                <img src="{% static 'core/images/email.png' %}" alt="">
+              </a>
+              </div>
+              <div class="detail-box">
+                <p>
+                  magic-paws@hotmail.com
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- end info_section -->
+
+    <!-- footer section -->
+    <section class="container-fluid footer_section">
+      <p>
+        &copy; 2023 All Rights Reserved By
+        <a>Magic Paws</a>
+      </p>
+    </section>
+    <!-- footer section -->
+    <!-- footer section -->
+
+    <script type="text/javascript" src="{% static 'core/js/jquery-3.4.1.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'core/js/bootstrap.js' %}"></script>

@@ -1,0 +1,269 @@
+{%extends "core/base.html"%}
+
+{%block title%}Inicio{%endblock%}
+
+{%block content%}
+
+{%load static%}
+
+
+<!-- contenido -->
+<!-- end header section -->
+<!-- slider section -->
+<section class=" slider_section position-relative">
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-4 offset-md-2">
+              <div class="slider_detail-box">
+                <h1>
+                  Acerca de
+                  <span>
+                    Magic Paws
+                  </span>
+                </h1>
+                <p>
+                  Magic Paws, nace a partir de un análisis que se realizó en la ciudad al ver
+                  la falta de guarderías, tiendas y lugares adecuados para el cuidado de mascotas,
+                  a que es indispensable brindarles lo mejor siendo ellas parte integral de nuestra familia.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="slider_img-box">
+                <img src="{% static 'core/images/Index1.png' %}" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-4 offset-md-2">
+              <div class="slider_detail-box">
+                <h1>
+                  Nuestra
+                  <span>
+                    Misión
+                  </span>
+                </h1>
+                <p>
+                  Satisfacer las necesidades de sus mascotas brindándoles un excelente trato,
+                  para Mejorar la calidad de vida a través de la prestación de servicios basados
+                  en el amor, la experiencia y los conocimientos adquiridos en el comportamiento
+                  canino. Brindamos las herramientas necesarias para fortalecer el vínculo familiar,
+                  logrando así una buena convivencia y el bienestar integral.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="slider_img-box">
+                <img src="{% static 'core/images/Index3.png' %}" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-4 offset-md-2">
+              <div class="slider_detail-box">
+                <h1>
+                  Nuestra
+                  <span>
+                    Visión
+                  </span>
+                </h1>
+                <p>
+                  Ser una empresa reconocida por nuestro
+                  profesionalismo en la mejor prestación
+                  de servicios dedicados al bienestar de las mascotas, brindándoles confianza,
+                  respeto y cariño, creando ambientes ideales para la felicidad y bienestar de nuestros clientes.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="slider_img-box">
+                <img src="{% static 'core/images/IndexGato.png' %}" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-4 offset-md-2">
+              <div class="slider_detail-box">
+                <h1>
+                  Nuestra
+                  <span>
+                    Historia
+                  </span>
+                </h1>
+                <p>
+                  Magic Paws, desde 2019 somos pioneros en hospedaje 5 estrellas
+                  para perros y gatos, servicios para mascotas.
+                  Preocupados en todo momento por el bienestar de tu mascota, seguimos incorporando servicios de
+                  calidad.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="slider_img-box">
+                <img src="{% static 'core/images/IndexGatPerr.png' %}" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+<!-- end slider section -->
+</div>
+
+<!-- about section -->
+
+<section class="about_section layout_padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="img-box">
+          <img src="{% static 'core/images/about.png' %}" alt="">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="detail-box">
+          <h2 class="custom_heading">
+            novedades
+            <span>
+              Nuestras mascotas
+            </span>
+          </h2>
+          <p>
+            Las mascotas pueden disminuir el estrés y la sensación de soledad, mejorar
+            la salud del corazón e, incluso, ayudar a los niños con sus habilidades emocionales y sociales.
+            Así lo asegura el NIH (National Institutes of Health), grupo de instituciones del gobierno de
+            Estados Unidos dedicado a la investigación médica.
+          </p>
+          <div>
+            <a href="{% url 'about' %}">
+              Mas novedades
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- service section -->
+<section class="service_section layout_padding">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6 offset-md-2">
+        <h2 class="custom_heading">
+          Nuestros <span>Servicios</span>
+        </h2>
+        <div class="container layout_padding2">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="img_box">
+                <img src="{% static 'core/images/Hospedaje.png' %}" alt="">
+              </div>
+              <div class="detail_box">
+                <h6>
+                  Hospedaje
+                </h6>
+                <p>
+                  Estarán alojados en
+                  cómodas y seguras instalaciones independientes y con supervisión constante de nuestro equipo de
+                  trabajo.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="img_box">
+                <img src="{% static 'core/images/guarderia.png' %}" alt="">
+              </div>
+              <div class="detail_box">
+                <h6>
+                  Guardería
+                </h6>
+                <p>
+                  Contamos con las mejores locaciones
+                  campestres donde tu mascota podrá disfrutar de un
+                  ambiente natural, aire puro, amplios espacios y la mejor compañía.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="img_box">
+                <img src="{% static 'core/images/adiestramiento.png' %}" alt="">
+              </div>
+              <div class="detail_box">
+                <h6>
+                  Adiestramiento
+                </h6>
+                <p>
+                  onsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                  enim ad minim veniam, quis nostrud exe
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <a href="{% url 'services' %}">
+            Mas servicios
+          </a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <img src="{% static 'core/images/IndexService.png' %}" alt="" class="w-100">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- end service section -->
+
+
+
+<!-- gallery section -->
+<section class="gallery-section layout_padding">
+  <div class="container">
+    <h2>
+      Nuestra Galeria
+    </h2>
+  </div>
+  <div class="container ">
+    <div class="img_box box-1">
+      <img src="{% static 'core/images/HomeVert.jpeg' %}" alt="">
+    </div>
+    <div class="img_box box-2">
+      <img src="{% static 'core/images/HomeLarge.jpeg' %}" alt="">
+    </div>
+    <div class="img_box box-3">
+      <a href="{% url 'gallery' %}"> Ver mas </a>>
+    </div>
+  </div>
+</section>
+
+</section>
+
+
+
+{%endblock%}

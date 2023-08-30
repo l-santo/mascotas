@@ -1,0 +1,25 @@
+{%extends "core/base.html"%}
+{%block title%}Galeria{%endblock%}
+{%block content%}
+{%load static%}
+
+<!-- CONTENIDO -->
+  <!-- gallery section -->
+  <section class="gallery-section layout_padding">
+    <div class="container">
+      <h2>
+        Nuestra Galería 
+      </h2>
+    </div>
+    <div class="container ">
+      {%for gallery in gallerys%}
+      <div class="img_box box-1">
+        <img src="{{gallery.image.url}}" alt="">
+      </div>
+      {%endfor%}  
+   
+    </div>
+  </section>
+
+
+  {%endblock%}

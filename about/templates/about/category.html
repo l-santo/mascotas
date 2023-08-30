@@ -1,0 +1,53 @@
+{%extends "core/base.html"%}
+{%block title%}Acerca{%endblock%}
+{%block content%}
+{%load static%}
+
+{%for about in abouts%}
+<section class="about_section layout_padding">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-6">
+        <div class="img-box">
+          {%if about.image.url != null%}
+          <img src="{{about.image.url}}" alt="">
+          {%endif%}
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="detail-box">
+          <h2 class="custom_heading">
+            <span>
+              {{about.title}}
+            </span>
+          </h2>
+          <p>
+            {{about.content}}
+          </p>
+          <div>
+            <span>Publicado por {{about.author}}
+              <em>en <em></em>
+
+                <em>en <em></em>
+
+                  {%for cate in about.category.all%}
+                  <a href="{%url 'category' cate.id%}" class="link"> {{cate.name}} </a>
+
+                  {%if not forloop.last%},{%endif%}
+
+                  {%endfor%}
+                  <em>{{about.published|date:"SHORT_DATE_FORMAT"}}<em></em>
+                  </em></span>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+{%endfor%}
+
+{%endblock%}

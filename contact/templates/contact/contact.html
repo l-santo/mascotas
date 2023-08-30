@@ -1,0 +1,58 @@
+{%extends "core/base.html"%}
+{%block title%}Contactos{%endblock%}
+{%block content%}
+{%load static%}
+
+
+<!-- CONTENIDO -->
+<!-- map section -->
+
+<section class="map_section">
+
+  <div class="form_container ">
+    <div class="row">
+      <div class="col-md-8 col-sm-10 offset-md-4">
+
+        {%if 'ok' in request.GET %}
+        <p><b>Su mensaje se ha enviado correctamente, en breve nos contactamos con usted</b></p>
+        {%endif%}
+
+        <form action="" method="POST">
+          {% csrf_token %}
+          <div class="text-center">
+            <h3>
+              Contact Us
+            </h3>
+          </div>
+          <br>
+          <div>
+            {{contactForm.name}}
+          </div>
+          {{contactForm.name.erros}}
+          <br>
+          <div>
+            {{contactForm.phone}}
+          </div>
+          {{contactForm.phone.erros}}
+          <br>
+          <div>
+            {{contactForm.email}}
+          </div>
+          {{contactForm.email.erros}}
+          <br>
+          <div>
+            {{contactForm.message}}
+          </div>
+          {{contactForm.message.erros}}
+          <div class="d-flex justify-content-center">
+            <button>
+              SEND
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+{%endblock%}
